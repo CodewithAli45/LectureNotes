@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const {validate} = require('../utils/validate')
 
 const cars = [
     {
@@ -56,12 +56,18 @@ router.get('/:id', (req, res) => {
 // now we are using post method
 router.post('/', (req,res) => {
     // console.log("cars body-- ", req.body);
-    const {name, price, type, origin}= req.body;
+    // const {name, price, type, origin}= req.body;
 
-    // validating the request
-    if(!name || !price || !type || !origin) {
-        return res.status(400).send("Every field is required to post the data ");
+    // // validating the request
+    // if(!name || !price || !type || !origin) {
+    //     return res.status(400).send("Every field is required to post the data ");
+    // }
+
+    const {error} = validate(req.body);
+    if(error){
+        return res.status(400).send(error.details[0].message);
     }
+    const {name, price, type, origin}= req.body;
     const newCar = {
         id: cars.length + 1,
         name,
