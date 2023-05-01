@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Ali Murtaza",
+        "age": 20,
+        "email": "ali.my@gmail.com"
+    },
+    {
+        "name": "Galileo",
+        "age": 25,
+        "origin": "Italy"
+    }
+]
