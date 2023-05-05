@@ -1,0 +1,8 @@
+backend working:
+1.  Creating a server:- folder - StudentProfile
+2.  inside it create app.js file - this is the file where request goint to hit after request from frontend
+3.  create following folders:
+    (i) routes -> export to app file 
+    (ii) models -> export to routes file
+    (iii) controller -> export to models
+    (iv) authentication -> export to controller

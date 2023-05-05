@@ -1,3 +1,10 @@
+// database - it is place where we can store and retrieve the data
+// SQL -> Structure Querying Language - tables and rows  
+// Pros -> very fast, consistent, stable, optimise
+// cons -> memory wastage, when the size need to improve the hardware, which searching is difficut vertical scaling
+
+// NoSQL -> collection (table) and document (rows)
+
 // mongoose -> ORM (Object Relational Manager) - mongoose
 const mongoose = require("mongoose");
 
